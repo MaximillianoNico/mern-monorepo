@@ -1,15 +1,10 @@
 import healthCheck from './routes/healthcheck';
 
-import { IMainRoute, IRequest } from './types'
+import { IMainRoute } from './types'
 
-const Interface = ({ app, client }: IMainRoute) => {
+const Interface = ({ app }: IMainRoute) => {
 
   // Define Routes
-  app.use((req: IRequest, res, next) => {
-    req.client = client;
-
-    next();
-  })
   app.use('/app', healthCheck({ app }));
 
   /**

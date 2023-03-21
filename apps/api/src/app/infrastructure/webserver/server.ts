@@ -30,14 +30,10 @@ const createServer = () => {
 
   app.use(express.json());
 
-  // Init SocketIO
+  // Init Routes
   Interface({ app })
 
-  // app.get('/', (req, res) => {
-  //   res.send({ message: 'Hello API' });
-  // });
-
-  server.listen(API_PORT || 3000, () => {
+  app.listen(API_PORT || 3000, () => {
     console.log(`Server listen on port ${API_PORT} server-time ${new Date().getHours()}:${new Date().getMinutes()}`);
   });
 
