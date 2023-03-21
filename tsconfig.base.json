@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-mern-monorepo/api-libs": ["libs/api-libs/src/index.ts"],
       "@nx-mern-monorepo/component-ui": ["libs/component-ui/src/index.ts"]
     }
   },
